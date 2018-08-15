@@ -1,0 +1,45 @@
+<div class="allPage">
+<h3> Sign Up </h3>
+
+<p *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</p>
+
+<form (ngSubmit)="doSignUp()" class="pure-form pure-form-aligned">
+  <fieldset>
+    <div class="form-group pure-control-group">
+      <label for="username-input"> Name</label>
+      <input id="username-input" type="text" placeholder="Your Name" [(ngModel)]="signUpInfo.username" name="usernameValue">
+      <span class="pure-form-message-inline">This is a required field.</span>
+      <br>
+    </div>
+
+<div class="form-group pure-control-group">
+  <label for="email-input"> Email</label>
+  <input id="email-input" type="email" placeholder="Your Email" [(ngModel)]="signUpInfo.email" name="emailValue">
+  <span class="pure-form-message-inline">This is a required field.</span>
+  <br>
+</div>
+
+<div class="form-group pure-control-group">
+  <label for="password-input"> Password </label>
+  <input id="password-input" type="password" placeholder="*****" [(ngModel)]="signUpInfo.password" name="passwordValue">
+  <span class="pure-form-message-inline">This is a required field.</span>
+  <br>
+</div>
+  
+<div class="form-group pure-control-group">
+  <label for="password-input">Re-enter password </label>
+  <input id="checkedPassword-input" type="password" placeholder="*****" [(ngModel)]="signUpInfo.checkedPassword" name="checkedPasswordValue">
+  <span class="pure-form-message-inline">This is a required field.</span> 
+  <br>
+</div>
+
+  <button class="btn btn-info"> Sign Up </button>
+</fieldset>  
+</form>
+<p>Already have an account?
+  <a [routerLink]="['/']">Log In</a>
+</p>
+
+</div>

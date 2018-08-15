@@ -1,0 +1,60 @@
+<div class="allPage">
+
+<div class="container">
+    <div class="row heading"><h2>Your Rolltop Desktop!</h2></div>
+
+    <div id="all-apps-thumbs" class="row">
+
+        <div class="col-sm-4 first">
+          <div id="projects-tile">
+            <h5>Your Projects</h5>
+            <hr>
+            <div *ngFor="let project of allTheProjects; let i =index">
+                <td *ngIf ="i>=allTheProjects.length -20"><a class="blackLink" [routerLink]="['/todo',project._id]">{{project.title}}</a></td>
+             </div>
+             <hr>
+             <a class="whiteLink" [routerLink]="['/todo']"> see more</a>
+          </div>   <!-- end of projects-tile div--> 
+        </div> <!-- end of first col div-->
+
+        <div class="col-sm-4 second">
+          <div id="pastebin-tile">
+            <h5>Your Pastebin </h5>
+            <hr>
+            <a [routerLink]="['/pastebin']"> see more</a>
+          </div><!-- end of pastebin-tile div--> 
+          <div id="places-tile">
+            <h5>Your Places </h5>
+            <hr>
+            <div *ngFor="let place of allThePlaces; let i =index">
+                <td *ngIf ="i>=allThePlaces.length -9"><a  class="blackLink" [routerLink]="['/places',place._id]">{{place.name}}</a></td>
+             </div>
+             <hr>
+            <a class="whiteLink" [routerLink]="['/places']"> see more</a>
+          </div> <!-- end of places-tile div--> 
+        </div> <!-- end of second col div-->
+
+        <div class="col-sm-4 third">
+          <div id="quote-tile">
+            <app-quote></app-quote>
+          </div> <!-- end of quote-tile div--> 
+          <div id="notes-tile">
+             <h5>Your Notes</h5>
+             <hr>
+             <div *ngFor="let note of allTheNotes; let i =index">
+                <td *ngIf ="i>=allTheNotes.length -3"><a class="blackLink"  [routerLink]="['/notes',note._id]">{{note.title}}</a></td>
+             </div>
+             <hr>
+             <a class="whiteLink" [routerLink]="['/notes']"> see more</a>
+          </div> <!-- end of notes-tile div--> 
+            
+            
+        </div> <!-- end of third col div-->
+
+
+    </div> <!-- end of all-apps-thumbs div-->
+
+</div> <!-- end of container div-->
+</div>
+
+

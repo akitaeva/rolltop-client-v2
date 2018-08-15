@@ -1,0 +1,60 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+   
+    display: block;
+    color: #010100;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #FFD433;
+    color: #f6f6f6;
+    border-radius: 10px;    
+
+}
+
+#myRollnav{
+    width: 100vw;
+    position: fixed;
+    box-shadow: 0px 1px 10px #010100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+  
+}
+
+.brand-logo {
+    font-size: 1.2rem;
+}
+
+.log-info {
+    color: #0090ca;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.log-info h5 {
+    margin: 10px;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(107, 135, 104, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+

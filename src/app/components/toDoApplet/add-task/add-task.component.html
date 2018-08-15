@@ -1,0 +1,27 @@
+<form  (submit)="saveNewTask()">
+
+  <div class = "row">
+    <h3>Add a New Task</h3>
+    <button>Add New Task</button>
+  </div>
+  <div class="row addTaskHeader">
+
+    <div class = "projectInfo col-sm-3">  
+      Title
+      <input [(ngModel)]="newTask.action" name="action" type="text" value = "New task">
+    </div>
+
+    <div class = "projectInfo col-sm-3">  
+      Due Date
+      <input [(ngModel)]="newTask.dueTime" name="action" type="date" min="2018-01-01" max="2018-12-31">
+    </div>
+
+    <div class = "projectInfo col-sm-3">  
+      Order Num
+      <input [(ngModel)]="newTask.orderNumber" name="action" type="text" value = "1">
+    </div>
+
+    <br>    
+  </div>
+
+</form>

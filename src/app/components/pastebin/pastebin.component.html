@@ -1,0 +1,35 @@
+<div class="allPage">
+<!-- Pastebin Upload -->
+
+  <div class="bckgnd">
+    <div class="bin-content">
+
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <h3><span class="input-group-text">Upload File</span></h3>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="selectFile($event)" placeholder="Upload file">
+        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+      </div>
+    </div>
+
+
+
+  <!-- Pastebin Downlaod -->
+  <h3> File's Available </h3>
+  <button class="btn btn-info" (click)="getFileList()">getFiles</button>
+
+  <div *ngFor= "let file of fileList">
+        {{file}} 
+        <!-- <button (click)="downloadFile(file)"> Download </button> -->
+        <a href= "{{baseUrl}}/pastebin/5b6864faae6e9c42cc2bdeaf/{{file}}" download = "true"> Download File</a>
+        <br>
+        <!-- <a [routerLink]="['entries', oneEntry._id]">See Details</a> --> 
+    </div>
+
+   </div> <!-- end of bin-content div-->
+
+  </div> <!-- end of bckgnd div-->
+</div>
+

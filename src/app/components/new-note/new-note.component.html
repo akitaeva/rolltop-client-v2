@@ -1,0 +1,15 @@
+<div class="new-note-form">
+<form (ngSubmit)="saveNewNote()" >
+  
+  <div class="form-group row">
+    <label for="">Title:</label>
+    <input type="text" name="title" id="note-title-input" [(ngModel)]="noteData.title">
+  </div>
+  <label for="">Content:</label>
+  <br>
+  <textarea name="content" id="note-content-input" cols="90" rows="20" [(ngModel)]="noteData.content"></textarea>
+  <br>
+
+  <button class="btn btn-outline-info">Save</button>
+</form>
+</div> <!-- end of new-note-form div-->

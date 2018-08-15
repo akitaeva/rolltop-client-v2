@@ -1,0 +1,76 @@
+#projects-tile {
+    background: #ff695b;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 70vh;
+    margin: 5px 5px;
+}
+
+.heading h2 {
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+#pastebin-tile {
+    background: #00CDD3;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 20vh;
+    margin: 5px 5px 15px;
+}
+
+#places-tile {
+    background: #0090ca;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 45vh;
+    margin: 5px 5px 15px;
+
+}
+
+#quote-tile {
+    background: #fff3bc;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 35vh;
+    margin: 5px 5px 15px;
+    overflow-y: auto;
+}
+
+
+#notes-tile {
+    background: #ffd800;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 30vh;
+    margin: 5px 5px 10px;
+}
+
+.second, .third {
+    display: flex;
+    flex-direction: column;
+}
+
+.blackLink {
+    color: #20252A;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px;
+}
+
+h5 {
+    font-size: 1.7em;
+    margin-bottom: 25px;
+}
+
+.whiteLink {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px;
+}

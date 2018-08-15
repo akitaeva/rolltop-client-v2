@@ -1,0 +1,66 @@
+#all-places-thumbs {
+    max-height: 80vh;
+    max-width: 85vw;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+#dining-tile {
+    background: #ff695b;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    max-height: 30rem;
+    min-height: 17rem;
+    max-width: 30rem;
+    margin: 5px 5px 15px;
+}
+
+#service-tile {
+    background: #00CDD3;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    max-height: 30rem;
+    min-height: 17rem;
+    max-width: 30rem;
+    margin: 5px 5px 15px;
+}
+
+
+#retail-tile {
+    background: #0090ca;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    max-height: 30rem;
+    min-height: 17rem;
+    max-width: 30rem;
+    margin: 5px 5px 15px;
+}
+
+#private-tile {
+    background: #ffd800;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    max-height: 30rem;
+    min-height: 17rem;
+    max-width: 30rem;
+    margin: 5px 5px 15px;
+}
+
+#newPlace {
+    text-align: right;
+}
+
+.closeTie {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.closeTie a {
+    margin-left: 15px;
+}

@@ -1,0 +1,33 @@
+
+<div class = "allPage">
+        <div class = "pageView">
+                <div class="row mainContent">
+                        <div class = "projectInfo col-sm-4">  
+                                <h2><b> {{project.title}} </b></h2>
+                                <p> - Purpose: {{project.description}}</p>
+                                <p> - Done: {{project.closed}}</p>
+                                
+                                Project Options<br>
+                                <button class="btn btn-outline-danger" (click)="showForm()"> Edit Project</button> 
+                                <button class="btn btn-outline-danger" (click) = "toggleDelete()"> Delete Project </button>
+
+                                <br><br>
+
+                                <div [hidden]="!show">  
+                                        <app-edit-project> </app-edit-project>
+                                </div>
+
+                                <div [hidden]="!showDelete">  
+                                        <p> Are you sure you want to delete this project? </p>
+                                        <button class="btn btn-outline-danger" (click) = "deleteProject(project._id)"> Yes, Delete </button>
+                                        <button class="btn btn-outline-danger" (click) = "toggleDelete()"> No, Cancel </button>
+                                </div>
+                        </div>
+
+                        <div class = "taskInfo col-sm-7">
+                                <app-show-tasks> </app-show-tasks>
+                        </div>
+
+                </div>
+        </div>  
+</div>

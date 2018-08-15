@@ -1,0 +1,43 @@
+.pageView {
+    background: #ff695b;
+    bottom: 150px;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 75vh;
+    width: 27vw;
+}
+.allPage {
+    padding: 10vh 10vw 10vh;
+}
+
+.project {
+    background: #ffbab3;
+    bottom: 150px;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 17px 50px;
+    height: 5vh;
+    width: 18vw;
+}
+
+.addProject{
+    background: #ff695b;
+    bottom: 150px;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 75vh;
+    width: 25vw;
+
+}
+
+.myProjects{
+    background: #fc8888;
+    bottom: 150px;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 40vh;
+    width: 18vw;
+}

@@ -1,0 +1,16 @@
+<form  (submit)="editProject(project)">
+  <h3>Edit Project</h3>
+
+  <label>Title: </label>
+  <input [(ngModel)]="project.title" name="title" type="text" value= "">
+
+  <label>Description: </label>
+  <textarea  [(ngModel)]="project.description" name="title" cols="30" rows="10" value = ""></textarea>
+
+  <br>
+
+  <input [(ngModel)]="project.closed" type="radio" name="done" checked> Done<br>
+
+  <button class="btn btn-outline-danger">Submit Edit</button>
+
+</form>

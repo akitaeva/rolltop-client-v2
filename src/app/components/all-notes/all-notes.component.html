@@ -1,0 +1,35 @@
+
+<div *ngIf="theUser.username" class="allPage">
+
+  <div id="pageView">
+    
+    <div class="row ">
+      <h3>Your Notes</h3>
+      <h3 [hidden]="!show">Add a New Note</h3>
+    </div>
+
+    
+    <div class="row mainContent">
+      <div class="col-sm-3 all-notes">
+        <ul *ngFor="let oneNote of allTheNotes">
+          <li><a class="a-black"[routerLink]="['/notes',oneNote._id]">{{ oneNote.title }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6" [hidden]="!show">
+          <app-new-note></app-new-note>
+          <button class="btn btn-outline-danger cancel"(click)="showForm()">Cancel</button>
+      </div>
+    
+      <div class="col-sm-6" id="placeholder" [hidden]="show">
+          <div id="newNote">
+              <h3>Create new note</h3>
+              <button class="btn btn-info btn-lg"(click)="showForm()"> Click Here</button>
+          </div>    
+      </div>
+
+
+    </div> <!-- end of mainContent div-->
+  
+  </div>  <!-- end of pageView div-->
+
+</div> <!-- end of allPage div-->

@@ -1,0 +1,65 @@
+.allPage {
+    padding: 15vh 10vw 10vh;
+}
+
+#pageView {
+    background: #ffd800;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 25px 40px;
+    height: 75vh;
+    width: 80vw;
+}
+
+.all-notes {
+    background-color: #fff3bc;
+    border-radius: 25px;
+    box-shadow:  0px 1px 10px #010100;
+    padding: 10px 15px;
+    max-height: 60vh;
+    height: 80rem;
+}
+
+.new-item {
+   display: flex;
+   justify-content: right;
+}
+
+.cancel {
+    float: left;
+}
+
+#placeholder {
+    
+    margin-left: 10vw;
+    min-height: 55vh;
+    max-height: 60vh;
+    width: 85vw;
+    background: url("https://res.cloudinary.com/bestcloudever/image/upload/v1533849788/rolltop/notes.jpg");
+    background-size: auto 100%;
+    box-shadow: 0px 5px 10px #010100;
+    border-radius: 25px;
+}
+
+#newNote {
+    text-shadow: -3px 2px 0  #010100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#newNote h3 {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 1px 10px #010100;
+    color: #67C5D2;
+    font-size: 3em;
+    padding: 10px 20px;
+}
+
+.a-black {
+    color: #010100;
+}

@@ -1,0 +1,3 @@
+input:required + .help-text::before {
+    content: '*Required';
+}

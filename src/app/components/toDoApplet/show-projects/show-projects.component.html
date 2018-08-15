@@ -1,0 +1,32 @@
+
+<div class= "allPage">
+        <div class="row">
+                <div class = "pageView">
+                        <div class = "col-sm-6">
+                                <div class = "projectHeader">
+                                        <h2> <b>Projects</b> </h2>
+                                        <button class="btn btn-danger" (click)="showForm()"> New Project </button>
+                                </div>
+
+                                <br> <br> 
+
+                                <div class = "myProjects">
+                                        <h3> My Projects </h3>
+                                        <div *ngFor= "let project of projectList">
+                                                <div class = "project">
+                                                        <a [routerLink]= "['/todo/', project._id]"> {{project.title}}</a>
+                                                </div>
+                                                <br>
+                                        </div>
+                                </div>
+                                <br>
+                        </div>
+                </div>
+
+                <div class = "addProject" [hidden]="!show">
+                        <div class = "col-sm-9">        
+                                 <app-new-project> </app-new-project>            
+                        </div>
+                </div>
+        </div>
+</div>

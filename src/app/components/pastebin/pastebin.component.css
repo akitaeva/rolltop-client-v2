@@ -1,0 +1,21 @@
+.bckgnd {
+    height: 70vh;
+    width: 80vw;
+    background: url("https://res.cloudinary.com/bestcloudever/image/upload/v1533772279/rolltop/containers.jpg") no-repeat center center fixed;
+    background-size: cover;
+    box-shadow: 0px 5px 10px #010100;
+    border-radius: 25px;
+}
+
+.bin-content {
+    background: #fff3bc;
+    box-shadow: inset 0px 1px 10px #010100;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 10vh 10vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}

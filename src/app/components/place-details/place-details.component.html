@@ -1,0 +1,56 @@
+<div class="allPage">
+        <div class="pageContent">
+
+   <a [routerLink]="['/places']">Go back to the list of places</a>         
+  
+  <div class="oneEntry" [hidden]="!show">
+    <h3>{{place.name}}</h3> 
+    <hr>
+    <h5 class="text-right">{{place.category}}</h5> 
+    <hr>
+    <p>{{place.notes}}</p>
+    <hr>
+  <div class="row">
+  <button class="btn btn-outline-danger" *ngIf="place._id" (click)="deleteThisPlace()">DELETE</button>
+  <button class="btn btn-outline-primary" *ngIf="place._id" (click)="editPlace()">EDIT</button>
+  </div>  
+</div>
+
+<app-gmap></app-gmap>
+
+  <!-- update area -->
+
+<form (ngSubmit)="doPlaceUpdate(place._id, myForm)" #myForm="ngForm" [hidden]="show" >
+    <h3>Edit the Fav Place Info</h3>
+    <label for="place-name-input"> Name: </label>
+    <input id="place-name-input" type="text" [(ngModel)]="place.name" name="name" value="{{ place.name }}">
+    <br>
+
+
+    <label for="">Category:</label>
+    <div>
+       <input type="radio" id="categoryChoice1" [(ngModel)]="place.category"
+        name="category" value="dining">
+       <label for="contactChoice1">Dining</label>
+   
+       <input type="radio" id="categoryChoice2" [(ngModel)]="place.category"
+        name="category" value="service">
+       <label for="contactChoice2">Services</label>
+       
+       <input type="radio" id="categoryChoice3" [(ngModel)]="place.category"
+       name="category" value="retail">
+       <label for="categoryChoice3">Retail</label>
+   
+       <input type="radio" id="categoryChoice4" [(ngModel)]="place.category"
+        name="category" value="private">
+       <label for="categoryChoice4">Private</label>
+   </div>
+
+    <label for="place-notes-input"> Notes: </label>
+    <textarea id="place-notes-input" cols="100" rows="10" type="text"  [(ngModel)]="place.notes" name="notes" value="{{place.notes}}"></textarea>
+    <br>
+    <button>Save updates</button>
+</form> 
+
+</div>
+</div>

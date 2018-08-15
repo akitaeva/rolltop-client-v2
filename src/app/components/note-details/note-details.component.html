@@ -1,0 +1,30 @@
+<div class="allPage">
+
+    <div id="pageView">
+  <div [hidden]="!show">
+    <h3>{{note.title}}</h3> 
+    <hr>
+    <p>{{note.content}}</p>
+  </div>
+  
+  <button class="btn btn-outline-danger" *ngIf="note._id" (click)="deleteThisNote()">DELETE</button>
+  <button class="btn btn-outline-primary" *ngIf="note._id" (click)="editNote()">EDIT</button>
+
+  <a [routerLink]="['/notes']">Go back to the list of notes</a>
+  <hr>
+
+  <!-- note update area -->
+
+<form (ngSubmit)="doNoteUpdate(note._id, myForm)" #myForm="ngForm" [hidden]="show" >
+    <label for="note-title-input"> Title: </label>
+    <input id="note-title-input" type="text"  [(ngModel)]="note.title" name="title" value="{{ note.title }}">
+    <br>
+    <label for="note-content-input"> Content: </label>
+    <textarea id="note-content-input" cols="100" rows="20" type="text"  [(ngModel)]="note.content" name="content" value="{{ note.content }}"></textarea>
+    <br>
+    <button>Save updates</button>
+    
+</form> 
+
+</div>
+</div>

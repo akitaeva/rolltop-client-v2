@@ -1,0 +1,44 @@
+<div class="allPage">
+  <div class="pageContent">
+
+<form (ngSubmit)="saveNewPlace()" >
+   <h3>Add a New Fav Place</h3>
+   <label for="place-name-input">Name:</label>
+   <input type="text" name="name" id="place-name-input" [(ngModel)]="placeData.name">
+   <br>
+   <label for="">Category:</label>
+   <div>
+      <input type="radio" id="categoryChoice1" [(ngModel)]="placeData.category"
+       name="category" value="dining">
+      <label for="contactChoice1">Dining</label>
+  
+      <input type="radio" id="categoryChoice2" [(ngModel)]="placeData.category"
+       name="category" value="service">
+      <label for="contactChoice2">Services</label>
+      
+      <input type="radio" id="categoryChoice3" [(ngModel)]="placeData.category"
+      name="category" value="retail">
+      <label for="categoryChoice3">Retail</label>
+  
+      <input type="radio" id="categoryChoice4" [(ngModel)]="placeData.category"
+       name="category" value="private">
+      <label for="categoryChoice4">Private</label>
+  </div>
+
+  <label for="">Address</label>
+  <div class="form-group">
+    <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+  </div>
+  
+  <br>
+   <label for="place-notes-input">Notes:</label>
+   <br>
+   <textarea name="notes" id="place-notes-input" cols="100" rows="10" [(ngModel)]="placeData.notes"></textarea>
+  <br>
+ 
+   <button class="btn btn-outline-info">Save</button>
+ </form>
+
+</div>
+</div>
+ 

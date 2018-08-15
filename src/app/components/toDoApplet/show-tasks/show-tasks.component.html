@@ -1,0 +1,42 @@
+<div class="row taskHeader">
+    <div class = "col-sm-9">      
+        <h2> Project Tasks </h2>
+    </div>
+    <div class = "col-sm-3">  
+        <button class="btn btn-danger" (click)="showForm()"> New Task </button>
+    </div>
+</div>
+  <div [hidden]="!show">
+      <app-add-task> </app-add-task>
+  </div>
+<br>
+    <h3> List of tasks </h3>
+    <div *ngFor= "let task of projectTasks">
+        <div class="row tasks">
+            <div class = "col-sm-4">   
+                <h4> ({{task.orderNumber}}) {{task.action}}</h4> 
+                Due Time: {{task.dueTime | date : "dd.MM.y" }} <br>
+                Completed: {{task.completed}} <br>
+
+                <div class="row">
+                    <div [hidden]= "task.completed">  
+                            <button class="btn btn-outline-danger" (click) = "showEditT()"> Edit Task </button>
+                    </div>
+
+                    <button class="btn btn-outline-danger" (click) = "confirmDelete()"> Delete Task </button>
+                </div>
+            </div>
+
+            <div [hidden]="!showEditTask" class = "col-sm-8">
+                <app-edit-task [taskObj] = 'task'> </app-edit-task>
+            </div>
+
+            <div [hidden]="!showDelete" class = "col-sm-8">
+                Do you want to delete this task?
+                <button class="btn btn-danger" (click) = "deleteTask(task)"> Delete Task </button>
+            </div>
+
+        </div>
+        <hr>
+        <!-- <a [routerLink]="['entries', oneEntry._id]">See Details</a> --> 
+    </div>

@@ -1,0 +1,68 @@
+<div *ngIf="theUser.username" class="allPage">
+  <h3>Your Favorite Places</h3>
+
+  
+  <div id="all-places-thumbs">
+ 
+  <div class="row first">  
+ <div class="col-sm-6" id="dining-tile"> 
+  <h5>Dining</h5>
+  <div *ngFor="let onePlace of allThePlaces">
+  <div *ngIf="onePlace.category==='dining'"> 
+        <ul>
+          <li><a [routerLink]="['/places',onePlace._id]">{{ onePlace.name }}  </a></li>
+        </ul>
+    </div> 
+  </div>
+</div>   <!-- end of dining-tile div-->
+  
+<div class="col-sm-6" id="service-tile"> 
+  <h5>Services</h5>
+  <div *ngFor="let onePlace of allThePlaces">
+  <div *ngIf="onePlace.category==='service'">
+        
+      <ul>
+        <li><a [routerLink]="['/places',onePlace._id]">{{ onePlace.name }}  </a></li>
+      </ul>
+  </div>
+  </div>
+ </div> <!-- end of service-tile div-->
+</div> <!-- end of first row div-->
+  
+ 
+ <div class="row second">
+ <div class="col-sm-6" id="retail-tile"> 
+  <h5>Retail</h5>
+  <div *ngFor="let onePlace of allThePlaces">
+  <div *ngIf="onePlace.category==='retail'">
+      
+      <ul>
+        <li><a [routerLink]="['/places',onePlace._id]">{{ onePlace.name }} </a></li>
+      </ul>
+  </div>
+  </div>
+ </div> <!-- end of retail-tile div-->
+  
+  <div class="col-sm-6" id="private-tile"> 
+  <h5>Private</h5>
+  <div *ngFor="let onePlace of allThePlaces">
+  <div *ngIf="onePlace.category==='private'">
+     
+      <ul>
+        <li><a [routerLink]="['/places',onePlace._id]">{{ onePlace.name }}  </a></li>
+      </ul>
+  </div>
+  </div>
+  </div> <!-- end of private-tile div-->
+</div> <!-- end of second row div-->
+
+  
+<div class="row closeTie" id="newPlace">
+ 
+    <h5>Create a new fav place entry</h5>
+    <a class="btn btn-outline-light" [routerLink]="['/places/new']"> Click Here</a>
+</div>
+
+
+</div>
+</div>
