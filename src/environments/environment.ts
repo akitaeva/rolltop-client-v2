@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   // make sure you never put apiBase: 'http://localhost:3000/' <= the last backslash
   // if you ever get error while deploying that is something like 'undefined < in JSON at position 1', the first thing to check is here, you most likely forgot to delete last backslash (or however you spell this '/')
-  apiBase: 'http://localhost:3000'
+  apiBase: 'http://localhost:3000',
+  apiKey:'AIzaSyDHDUcBBjQiiOh-PXS_SbPX5tqCOFkIENs'
 };
 
 
